@@ -8,7 +8,7 @@ elForm.addEventListener("submit" , (e) => {
         username:e.target.username.value,
         password:e.target.password.value
     }
-    if(obj.username =="farrux" && obj.password == "123"){
+    if(obj.username =="Farrux" && obj.password == "123"){
         elModalCheck.classList.add("!right-10")
         window.localStorage.setItem("userdata" , JSON.stringify(obj))
         setTimeout(() => {
