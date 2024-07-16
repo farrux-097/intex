@@ -1,25 +1,23 @@
-let elLoginForm = document.querySelector(".login-form")
+let elForm = document.querySelector(".login-form")
+let elModalCheck = document.querySelector(".modal-check")
 
-elLoginForm.addEventListener("submit", (evt) => {
-    evt.preventDefault();
-    let regex = /[1-9]/
-    const userData = {
-        username:evt.target.username.value,
-        password:evt.target.password.value
+
+elForm.addEventListener("submit" , (e) => {
+    e.preventDefault()
+    let obj = {
+        username:e.target.username.value,
+        password:e.target.password.value
     }
-    if(regex.test(userData.password)){
-        if(userData.username == "Farrux" && userData.password == "123"){
-            window.localStorage.setItem("userData", JSON.stringify(userData) )
-           alert("Complated")
-           setTimeout(() => {
-               location.pathname = "./admin.html"
-           },1000)
-       }
-       else{
-           alert("Failed!")
-       }
+    if(obj.username =="farrux" && obj.password == "123"){
+        elModalCheck.classList.add("!right-10")
+        window.localStorage.setItem("userdata" , JSON.stringify(obj))
+        setTimeout(() => {
+                location.pathname = "admin.html"
+                e.target.reset()
+        },2000)
     }
     else{
-        alert("Password includes only numbers !")
+        alert("What is wrong (login or password)")
+        e.target.reset()
     }
 })

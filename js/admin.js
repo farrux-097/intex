@@ -1,3 +1,5 @@
-let elUsername = document.querySelector(".username ")
-const userData = JSON.parse(window.localStorage.getItem("userData"))
-elUsername.textContent = userData.username
+let elUsrname = document.querySelector(".user-name")
+
+let userData = JSON.parse(window.localStorage.getItem("userdata"))
+
+elUsrname.textContent = userData.username

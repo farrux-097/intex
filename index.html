@@ -3,25 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Login</title>
     <style type="text/tailwindcss">
         @layer utilities {
           .content-auto {
             content-visibility: auto;
           }
         }
-    </style>
-    <link rel="stylesheet" href="/css/main.css">
-    <title>Document</title>
+      </style>
 </head>
-<body class="login-bg">
-    <form class="login-form w-[621px] h-[462px] pt-[35px] text-center pb-[46px] bg-[#F8F8F8] rounded-[25px] shadow-lg fixed right-0 left-0 top-0 bottom-0 m-auto">
-        <img  class="mb-[17px] mx-auto" src="./images/Login/Intex-market.uz (1).svg" alt="Logo" width="421" height="72">
-        <p class="font-bold text-[25px] leading-[29.03px] text-[#A3A3A3] mb-[50px]">Введите имя пользователя и пароль, чтобы получить доступ к системе.</p>
-        <input class="w-[360px] text-center py-[12px] rounded-[17px] border-[1px] border-[#CBCBCB] text-[#A3A3A3] outline-none shadow-lg placeholder:font-bold placeholder:-[25px]  text-[20px]  mb-[16px]" type="text" placeholder="Имя пользователя" required name="username">
-        <input class="w-[360px] text-center py-[12px] rounded-[17px] border-[1px] border-[#CBCBCB] text-[#A3A3A3] outline-none shadow-lg placeholder:font-bold placeholder:-[25px]  text-[20px] " type="password" placeholder="Пароль" required name="password">
-        <button class="w-[237px] bg-[#3F8C8E] font-bold text-white text-[25px] block mx-auto mt-[47px]  rounded-[10px] py-[8px]" type="submit">Войти</button>
+<body class="login-body flex justify-center items-center">
+    <form class="login-form text-center bg-[#F8F8F8] w-[621px] rounded-[25px] shadow-lg  p-[35px] pb-[46px]">
+        <img src="./images/login/logo.svg" alt="logo" width="421" height="72" class="mx-auto mb-[17px]">
+        <p class="font-bold text-[25px] leading-[29px] text-[#A3A3A3] mb-[17px]">Введите имя пользователя и пароль, чтобы получить доступ к системе.</p>
+        <label class="flex flex-col items-center gap-[17px]">
+            <input name="username" required type="text" placeholder="Имя пользователя" class="w-[360px] rounded-[17px] text-[#3F8C8E] border-[1px] border-[#CBCBCB] shadow-lg py-[12.5px] px-[58px] placeholder:text-[#A3A3A3] placeholder:text-[25px] placeholder:font-bold placeholder:leading-[29px] outline-none ">
+            <input name="password" required type="password" placeholder="Пароль" class="w-[360px] rounded-[17px] text-[#3F8C8E] border-[1px] border-[#CBCBCB] shadow-lg py-[12.5px] px-[58px] placeholder:text-[#A3A3A3] placeholder:text-[25px] placeholder:font-bold placeholder:leading-[29px] outline-none ">
+            <button type="submit" class="w-[237.46px] mt-[30px] bg-[#3F8C8E] pt-[4px] pb-[6px] rounded-[10px] text-[25px] font-bold leading-[29px] text-white">Войти</button>
+        </label>
     </form>
-    <script src="/js/login.js"></script>
+    <div class="modal-check bg-[#F8F8F8] w-[250px] px-[55px] py-[10px] absolute right-[-100%] text-center rounded-[16px] top-10 flex gap-[3px]">
+      <p class="text-[22px] text-[#3F8C8E] ">Complated</p>
+      <img src="./images/login/modal-check.svg" alt="check" width="25" height="20">
+    </div>
+
+
+    <script src="./js/login.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -33,6 +41,6 @@
             }
           }
         }
-    </script>    
+      </script>
 </body>
 </html>
